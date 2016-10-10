@@ -1,0 +1,7 @@
+use_frameworks!
+target 'LumberMill_Tests' do
+  pod 'LumberMill', :path => '../'
+  
+  pod 'Quick', '~> 0.8'
+  pod 'Nimble', '~> 3.0'
+end
