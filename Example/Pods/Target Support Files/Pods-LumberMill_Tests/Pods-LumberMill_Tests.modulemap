@@ -1,0 +1,6 @@
+framework module Pods_LumberMill_Tests {
+  umbrella header "Pods-LumberMill_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

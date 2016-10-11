@@ -22,7 +22,8 @@ pod "LumberMill"
 
 ## Author
 
-David Baldwynn, shorerydr10@live.com
+David Baldwynn, polydaic@gmail.com
+Gabriel Uribe
 
 ## License
 
