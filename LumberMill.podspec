@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LumberMill'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LumberMill.'
+  s.version          = '1.0.0'
+  s.summary          = 'A simple iOS Logging Library'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/LumberMill'
+  s.homepage         = 'https://github.com/ubclaunchpad/LumberMill'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'David Baldwynn' => 'shorerydr10@live.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/LumberMill.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/ubclaunchpad/LumberMill.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
