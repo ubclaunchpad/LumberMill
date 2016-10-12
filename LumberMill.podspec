@@ -26,11 +26,11 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'David Baldwynn' => 'shorerydr10@live.com' }
   s.source           = { :git => 'https://github.com/ubclaunchpad/LumberMill.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/baldwynn'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LumberMill/Classes/**/*'
+  s.source_files = 'LumberMill/Classes/**.swift'
   
   # s.resource_bundles = {
   #   'LumberMill' => ['LumberMill/Assets/*.png']

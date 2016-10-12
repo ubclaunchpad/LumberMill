@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		84330B811DAC3E4D00AD3A6B /* LumberMill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84330B801DAC3E4D00AD3A6B /* LumberMill.swift */; };
 		D3FB6E756C6537A012627FA5 /* Pods_LumberMill_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D27FC73F791243CF011300 /* Pods_LumberMill_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,7 +19,6 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		60ABCBF3C2B65DA736EE3E08 /* Pods-LumberMill_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LumberMill_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LumberMill_Tests/Pods-LumberMill_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71127A8216EC94CD00AB203E /* LumberMill.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LumberMill.podspec; path = ../LumberMill.podspec; sourceTree = "<group>"; };
-		84330B801DAC3E4D00AD3A6B /* LumberMill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LumberMill.swift; sourceTree = "<group>"; };
 		94B9D2AC1312677E9AE9A4E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F376D329404F3C868D15542B /* Pods-LumberMill_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LumberMill_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LumberMill_Tests/Pods-LumberMill_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,7 +38,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				84330B801DAC3E4D00AD3A6B /* LumberMill.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -221,7 +218,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84330B811DAC3E4D00AD3A6B /* LumberMill.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

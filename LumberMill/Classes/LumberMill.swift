@@ -68,7 +68,7 @@ public class LumberMill {
     private var levelColor = LevelColor()
     private var minLogLevel: Int
     
-    init() {
+    public init() {
         levelColor.verbose = "💜 "     // silver
         levelColor.debug = "💚 "        // green
         levelColor.info = "💙 "         // blue
@@ -78,7 +78,7 @@ public class LumberMill {
         minLogLevel = 1
     }
     
-    init(minLogLevel: Int) {
+    public init(minLogLevel: Int) {
         levelColor.verbose = "💜 "     // silver
         levelColor.debug = "💚 "        // green
         levelColor.info = "💙 "         // blue

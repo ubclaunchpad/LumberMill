@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## LumberMill
 
-Copyright (c) 2016 David Baldwynn <shorerydr10@live.com>
+Copyright (c) 2016 UBC Launch Pad
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
