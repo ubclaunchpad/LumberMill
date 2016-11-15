@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LumberMill'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A Simple Logging Framework for iOS'
 
 # This description is used to generate tags and improve search results.
@@ -32,11 +32,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'LumberMill/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'LumberMill' => ['LumberMill/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
