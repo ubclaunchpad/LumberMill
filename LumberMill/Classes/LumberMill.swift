@@ -8,21 +8,21 @@
 
 import Foundation
 
-public class LumberMill {
+open class LumberMill {
     
-    public static let version = "1.0.0"
+    open static let version = "1.0.0"
     
-    private class URLUtil {
+    fileprivate class URLUtil {
         
-        static func getNameFromStringPath(stringPath: String) -> String {
+        static func getNameFromStringPath(_ stringPath: String) -> String {
             //URL sees that "+" is a " "
-            let stringPath = stringPath.stringByReplacingOccurrencesOfString(" ", withString: "+")
-            let url = NSURL(string: stringPath)
-            return url!.lastPathComponent!
+            let stringPath = stringPath.replacingOccurrences(of: " ", with: "+")
+            let url = URL(string: stringPath)
+            return url!.lastPathComponent
         }
         
-        static func getNameFromURL(url: NSURL) -> String {
-            return url.lastPathComponent!
+        static func getNameFromURL(_ url: URL) -> String {
+            return url.lastPathComponent
         }
     }
     
@@ -41,32 +41,32 @@ public class LumberMill {
         static let ERROR = 4
         static let TEST = 5
     }
-
+    
     /// returns color string for level
-    func colorForLevel(level: Int) -> String {
+    func colorForLevel(_ level: Int) -> String {
         var color = ""
         
         switch level {
-            case 1:
-                color = levelColor.debug
-                
-            case 2:
-                color = levelColor.info
-                
-            case 3:
-                color = levelColor.warning
-                
-            case 4:
-                color = levelColor.error
-                
-            default:
-                color = levelColor.verbose
+        case 1:
+            color = levelColor.debug
+            
+        case 2:
+            color = levelColor.info
+            
+        case 3:
+            color = levelColor.warning
+            
+        case 4:
+            color = levelColor.error
+            
+        default:
+            color = levelColor.verbose
         }
         return color
     }
     
-    private var levelColor = LevelColor()
-    private var minLogLevel: Int
+    fileprivate var levelColor = LevelColor()
+    fileprivate var minLogLevel: Int
     
     init() {
         levelColor.verbose = "💜 "     // silver
@@ -88,11 +88,11 @@ public class LumberMill {
         self.minLogLevel = minLogLevel
     }
     
-    public func setMinLogLevel(logLevel: Int) {
+    open func setMinLogLevel(_ logLevel: Int) {
         minLogLevel = logLevel
     }
     
-    private var escape = ""
+    fileprivate var escape = ""
     
     
     /**
@@ -108,10 +108,10 @@ public class LumberMill {
      - Parameter functionName: automatically generated based on the function that called this function
      - Parameter lineNumber: automatically generated based on the line that called this function
      */
-    public func test(logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+    open func test(_ logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
         let fileName = URLUtil.getNameFromStringPath(classPath)
         if minLogLevel <= LogLevelChoices.TEST {
-            print("\(NSDate().timeStamp()) " + escape + colorForLevel(LogLevelChoices.DEBUG) + "TEST in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
+            print("\(Date().timeStamp()) " + escape + colorForLevel(LogLevelChoices.DEBUG) + "TEST in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
         }
     }
     
@@ -128,10 +128,10 @@ public class LumberMill {
      - Parameter functionName: automatically generated based on the function that called this function
      - Parameter lineNumber: automatically generated based on the line that called this function
      */
-    public func error(logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+    open func error(_ logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
         let fileName = URLUtil.getNameFromStringPath(classPath)
         if minLogLevel <= LogLevelChoices.ERROR {
-            print("\(NSDate().timeStamp()) " + escape + colorForLevel(LogLevelChoices.DEBUG) + "ERROR in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
+            print("\(Date().timeStamp()) " + escape + colorForLevel(LogLevelChoices.DEBUG) + "ERROR in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
         }
     }
     
@@ -148,10 +148,10 @@ public class LumberMill {
      - Parameter functionName: automatically generated based on the function that called this function
      - Parameter lineNumber: automatically generated based on the line that called this function
      */
-    public func warn(logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+    open func warn(_ logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
         let fileName = URLUtil.getNameFromStringPath(classPath)
         if minLogLevel <= LogLevelChoices.WARN {
-            print("\(NSDate().timeStamp()) " + escape + colorForLevel(LogLevelChoices.DEBUG) + "WARN in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
+            print("\(Date().timeStamp()) " + escape + colorForLevel(LogLevelChoices.DEBUG) + "WARN in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
         }
     }
     
@@ -168,10 +168,10 @@ public class LumberMill {
      - Parameter functionName: automatically generated based on the function that called this function
      - Parameter lineNumber: automatically generated based on the line that called this function
      */
-    public func info(logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+    open func info(_ logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
         let fileName = URLUtil.getNameFromStringPath(classPath)
         if minLogLevel <= LogLevelChoices.INFO {
-            print("\(NSDate().timeStamp())" + escape + colorForLevel(LogLevelChoices.DEBUG) + "INFO in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
+            print("\(Date().timeStamp())" + escape + colorForLevel(LogLevelChoices.DEBUG) + "INFO in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
         }
     }
     
@@ -188,54 +188,54 @@ public class LumberMill {
      - Parameter functionName: automatically generated based on the function that called this function
      - Parameter lineNumber: automatically generated based on the line that called this function
      */
-    public func debug(logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+    open func debug(_ logMessage: String, classPath: String = #file, functionName: String = #function, lineNumber: Int = #line) {
         let fileName = URLUtil.getNameFromStringPath(classPath)
         if minLogLevel <= LogLevelChoices.DEBUG {
-            print( "\(NSDate().timeStamp())" + escape + colorForLevel(LogLevelChoices.DEBUG) + "DEBUG in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
+            print( "\(Date().timeStamp())" + escape + colorForLevel(LogLevelChoices.DEBUG) + "DEBUG in \(fileName):\(functionName):\(lineNumber):: \(logMessage)")
         }
     }
 }
 
 
-extension NSDate {
+extension Date {
     
     func hour() -> Int {
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.Hour, fromDate: self)
+        let calendar = Calendar.current
+        let components = (calendar as NSCalendar).components(.hour, from: self)
         let hour = components.hour
-        return hour
+        return hour!
     }
     
     
     func minute() -> Int {
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.Minute, fromDate: self)
+        let calendar = Calendar.current
+        let components = (calendar as NSCalendar).components(.minute, from: self)
         let minute = components.minute
-        return minute
+        return minute!
     }
     
     func timeStamp() -> String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss.SSS"
-        return formatter.stringFromDate(self)
+        return formatter.string(from: self)
     }
     
     func timeStampAMPM() -> String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
-        formatter.AMSymbol = "AM"
-        formatter.PMSymbol = "PM"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
         
-        return formatter.stringFromDate(self)
+        return formatter.string(from: self)
     }
     
     func detailedTimeStamp() -> String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a 'on' EEEE, MMM d"
-        formatter.AMSymbol = "AM"
-        formatter.PMSymbol = "PM"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
         
         
-        return formatter.stringFromDate(self)
+        return formatter.string(from: self)
     }
 }

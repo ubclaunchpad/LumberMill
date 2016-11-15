@@ -1,9 +1,8 @@
 {
   "name": "LumberMill",
-  "version": "0.1.0",
-  "summary": "A short description of LumberMill.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/LumberMill",
+  "version": "0.0.1",
+  "summary": "A Simple Logging Framework for iOS",
+  "homepage": "https://github.com/ubclaunchpad/LumberMill",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +11,14 @@
     "David Baldwynn": "shorerydr10@live.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/LumberMill.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/ubclaunchpad/LumberMill.git",
+    "tag": "0.0.1"
   },
+  "source_files": "LumberMill/Classes/**/*",
   "platforms": {
-    "ios": "8.0"
-  },
-  "source_files": "LumberMill/Classes/**/*"
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
 }
