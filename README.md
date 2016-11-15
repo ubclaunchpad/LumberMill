@@ -4,7 +4,6 @@
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/LFAlertController.svg)  
-[![Platform](https://img.shields.io/cocoapods/p/LumberMill.svg?style=flat)](http://cocoapods.org/pods/LumberMill)
 
 LumberMill is a simple logging library for iOS 10 and Swift 3.0. It allows users to Log files with 5 different levels and to set the minimum log level that will be recorded
 
